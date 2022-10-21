@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Gustavo de Almeida Carvalho</title>
+        <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="col col-12 text-center m-5">
+            <h1 class="display-5">Gustavo de A. Carvalho JS</h1>           
+        </div>
+        <div class="container shadow-lg p-3">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite um número de 2 digitos</label
+                    >
+                    <input
+                        type="text"
+                        id="num"
+                        class="form-control valida_numero"
+                        placeholder="01"
+                        onkeyup="valida_numero(this.value)"
+                        maxlength="2"
+                    />
+                    <div class="valid-feedback">Número válido!</div>
+                    <div class="invalid-feedback">Número invalido!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite um ano</label
+                    >
+                    <input
+                        type="text"
+                        id="ano"
+                        class="form-control valida_ano"
+                        placeholder="1960"
+                        onkeyup="valida_ano(this.value)"
+                        maxlength="4"
+                    />
+                    <div class="valid-feedback">Ano válido!</div>
+                    <div class="invalid-feedback">Ano invalido!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite um user</label
+                    >
+                    <input
+                        type="text"
+                        class="form-control valida_user"
+                        placeholder="@exemplo"
+                        onkeyup="valida_user(this.value)"
+                        maxlength="20"
+                    />
+                    <div class="valid-feedback">User válido!</div>
+                    <div class="invalid-feedback">User invalido!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite um site brasileiro</label
+                    >
+                    <input
+                        type="text"
+                        class="form-control valida_site"
+                        placeholder="exemplo.com.br"
+                        onkeyup="valida_site(this.value)"
+                    />
+                    <div class="valid-feedback">Site válido!</div>
+                    <div class="invalid-feedback">Site invalido!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Telefone fixo com ddd</label
+                    >
+                    <input
+                        type="text"
+                        id="fone"
+                        class="form-control valida_fone"
+                        placeholder="(19)3444-3000"
+                        onkeyup="valida_fone(this.value)"
+                        maxlength="13"
+                    />
+                    <div class="valid-feedback">Telefone válido!</div>
+                    <div class="invalid-feedback">Telefone invalido!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite somente números (Codigo do País, DDD)</label
+                    >
+                    <input
+                        type="text"
+                        id="cel"
+                        class="form-control valida_cel"
+                        placeholder="+55(00)99444-7000"
+                        onkeyup="valida_cel(this.value)"
+                        maxlength="17"
+                    />
+                    <div class="valid-feedback">Celular válido!</div>
+                    <div class="invalid-feedback">Celular invalido!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite um RG</label
+                    >
+                    <input
+                        type="text"
+                        id="rg"
+                        class="form-control valida_rg"
+                        placeholder="44.555.333-00"
+                        onkeyup="valida_rg(this.value)"
+                        maxlength="13"
+                    />
+                    <div class="valid-feedback">RG válido!</div>
+                    <div class="invalid-feedback">RG invalido!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite um CPF</label
+                    >
+                    <input
+                        type="text"
+                        id="cpf"
+                        class="form-control valida_cpf"
+                        placeholder="444.555.333-00"
+                        onkeyup="valida_cpf(this.value)"
+                        maxlength="14"
+                    />
+                    <div class="valid-feedback">CPF válido!</div>
+                    <div class="invalid-feedback">CPF invalido!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite uma data</label
+                    >
+                    <input
+                        type="text"
+                        id="data"
+                        class="form-control valida_data"
+                        placeholder="30/05/2002"
+                        onkeyup="valida_data(this.value)"
+                        maxlength="10"
+                    />
+                    <div class="valid-feedback">Data válida!</div>
+                    <div class="invalid-feedback">Data invalida!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite uma hora</label
+                    >
+                    <input
+                        type="text"
+                        id="hr"
+                        class="form-control valida_hora"
+                        placeholder="22:06"
+                        onkeyup="valida_hora(this.value)"
+                        maxlength="5"
+                    />
+                    <div class="valid-feedback">Hora válida!</div>
+                    <div class="invalid-feedback">Hora invalida!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite uma data e hora</label
+                    >
+                    <input
+                        type="text"
+                        id="dthr"
+                        class="form-control valida_dthr"
+                        placeholder="20/01/2022 as 20:30"
+                        onkeyup="valida_dthr(this.value)"
+                        maxlength="15"
+                    />
+                    <div class="valid-feedback">Data e hora válida!</div>
+                    <div class="invalid-feedback">Data e hora invalida!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Digite um valor em R$</label
+                    >
+                    <input
+                        type="text"
+                        id="din"
+                        class="form-control valida_din"
+                        placeholder="R$ 5000,50"
+                        onkeyup="valida_din(this.value)"
+                        maxlength="10"
+                    />
+                    <div class="valid-feedback">Formato válido!</div>
+                    <div class="invalid-feedback">Formato inválido!</div>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">
+                        Gustavo de Almeida Carvalho
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./bootstrap/js/jquery-3.6.1.min.js"></script>
+
+        <script src="validation.js"></script>
+    </body>
+</html>
